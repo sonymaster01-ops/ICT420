@@ -4,27 +4,53 @@
         <title>Anson Hill - My Journey!</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial scale=1.0">
-        
+        <meta name="description" content="About Anson Hill">
     </head>
     <body>
         <main>
+            <!--Top line for separation-->
             <hr>
+
+            <!--Navigation Bar-->
+            <nav>
+                <ul>
+                    <li><a href="#About_Me">About Me</a></li>
+                    <li><a href="#Where_I've_Been">Where I've Been</a></li>
+                    <li><a href="#Where_IWT_Go">Where I Want to Go</a></li>
+                </ul>
+            </nav>
+
+            <!--Main content of the page-->
+            <header>
+                <h1>My Journey</h1>
+                <p>Welcome to my journey! Here you can find out more about me and where I have been!</p>
+            
+            <!--About Me Section-->    
             <section>
                 <h1 id="About_Me"> About Me </h1>
                 <p>
-                I am from a small town in northeast Ohio called Upper Sandusky.
-                I lived there for about eighteen years until I moved to Lexington
-                I have two bulldogs back home named Diesel and Tank. (insert photo(s))
-                I currently travel the country doing low voltage contruction work, all
-                while being a student at UK and a member of the Kentucky National Guard.
+                    I am from a small town in northeast Ohio called Upper Sandusky.
+                    I lived there for about eighteen years until I moved to Lexington
+                    I have two bulldogs back home named Diesel and Tank. (insert photo(s))
+                    I currently travel the country doing low voltage contruction work, all
+                    while being a student at UK and a member of the Kentucky National Guard.
                 </p>
+                <!--Images of Diesel and Tank-->
+                <img src="media/Tank - Copy.jpeg" alt="Diesel" width="250" height="400">
+                <img src="media/MeAndDiesel - Copy.jpeg" alt="Tank" width="350" height="400">
+                <img src="media/HannahAndDogs.jpeg" alt="Anson Hill" width="300" height="400">
             </section>
-            <hr> 
+
+            <!--Separation from About Me to Where I've Been-->
+            <hr>
+            
+            <!--Where I've Been Section-->
             <section>
                 <h2 id="Where_I've_Been"> Where I've Been </h2>
                 <p>
                     Here are some of the major cities that I have been to / worked at!
                 </p>
+                            <!--List of Cities Hyperlinked-->
                 <ol>
                     <li><a href="https://www.columbus.gov/Home" target="_blank">Columbus, OH</a></li>
                     <li><a href="https://www.clevelandohio.gov/" target="_blank">Cleveland, OH</a></li>
@@ -47,14 +73,74 @@
                 </ol>
                 <p>
                     These are just a few, but I have seen a lot while working on the road!
+                    I have been to many other cities, but these are the ones that I have spent
+                    the most time in. I have been to a lot of different states, but I have not
+                    been to all of them yet.
+                </p>
+            </section>
+            
+            <!--Separation from Where I've Been to Where I Want To Go-->
+            <hr>
+            <section>
+                <h3 id="Where_IWT_Go"> Where I Want To Go</h3>
+                <p>
+                    I have always wanted to visit outside of the country, as I have never been!
+                    I have always wanted to go to Europe, and I have a few places in mind that I
+                    would like to visit. I have always wanted to go to Norway, as my family roots originate
+                    from there. I have also always wanted to go to Italy, as I have heard that
+                    it is beautiful and I also have a friend in the Air Force who is stationed there.
+
                 </p>
             </section>
             <hr>
             <section>
-                <h3 id="Where_IWT_Go"> Where I Want to Go</h3>
-                <p>
-                    I have always wanted to visit outside of the country, as I have never been!
-                </p>
+                <table>
+                    <caption>Ranking Random Activites</caption>
+                    <thead>
+                        <tr>
+                            <th scope="colgroup" colspan="10"> What could it be!?</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Activities</th>
+                            <th scope="col">Rating</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Video Games</th>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Stubbing Your Toe</th>
+                        <td>-3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Being Late to Class</th>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Forgetting Homework</th>
+                        <td>-1000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Ice Water at 3 AM</th>
+                        <td>10000</td>
+                    </tr>
+                </tbody>
+                    <hr>
+                </table>
+
+                <h2> Find these relatable? :</h2>
+
+                <form action="#" method="get">
+                    <label for="response">Tell me what you think!</label>
+                    <input type="text" response="response" id="response" required>
+                    <input type="submit" value="Submit">
+                </form>
+                
+                <form action="#" method="get">
+                    <button type="submit" name="useless button"> Useless Button </button>
+                </form>
             </section>
         </main>
     </body>
