@@ -1,0 +1,25 @@
+/* Basic CSS Elements (font color for now) */
+
+/*Headings*/
+h1{color:blue;}
+h2{color:green;}
+h3{color:orange;}
+
+/*Paragraphs*/
+p{color:purple;}
+
+/*Links*/
+a{color:yellow;}
+a:hover{color:red;}
+
+/*Table Headers*/
+th{color:darkblue;}
+
+/*Table Data*/
+td{color:darkgreen;}
+
+/*Forms*/
+label{color:royalblue;}
+
+/*Buttons*/
+button, input[type="submit"]{color:darkred;}
