@@ -4,6 +4,14 @@
 h1{color:blue;}
 h2{color:green;}
 h3{color:orange;}
+h4{color:teal;}
+h5{color:darkviolet;}
+
+
+h1, h2, h3, h4, h5{
+    font-size: 20pt;
+    font-family: 'Times New Roman', Times, serif;
+}
 
 /*Paragraphs*/
 p{color:purple;}
@@ -12,6 +20,9 @@ p{color:purple;}
 a{color:darkcyan;}
 a:hover{color:red;}
 
+ol > li {
+    background-color: black;
+}
 /*Table Headers*/
 th{color:darkblue;}
 
