@@ -1,16 +1,37 @@
 /* Basic CSS Elements (font color for now) */
 
-/*Headings*/
-h1{color:blue;}
-h2{color:green;}
-h3{color:orange;}
-h4{color:teal;}
-h5{color:darkviolet;}
+/* Global variables for Colors/Units */
+:root {
+    --main-text-color: #ffffff;
+    --secondary-text-color: #666;
+    --background-color: #000000;
+    --accent-color: #007BFF;
+    --main-font-family: 'Arial', sans-serif;
+    --main-font-size: 1em; /* 16px */
+    --spacing-unit: 1em; /* 16px */
+    --main-font-size: 16px;
+}
 
+/* Style */
+body {
+    color: var(--main-text-color);
+    background-color: var(--background-color);
+    font-family: var(--main-font-family);
+    font-size: var(--main-font-size);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+/*Headings*/
 
 h1, h2, h3, h4, h5{
-    font-size: 20pt;
-    font-family: 'Times New Roman', Times, serif;
+    color: var(--main-text-color);
+    font-family: var(--main-font-family);
+    font-size: var(--main-font-size);
+    margin: var(--spacing-unit) 0;
+    padding: var(--spacing-unit) 0;
+    font-weight: normal;
+    text-align: center;
 }
 
 /*Paragraphs*/
@@ -33,4 +54,26 @@ td{color:darkgreen;}
 label{color:royalblue;}
 
 /*Buttons*/
-button, input[type="submit"]{color:darkred;}
+.button{
+    background-color: var(--accent-color);
+    color: var(--main-text-color);
+    padding: var(--spacing-unit);
+    border: 1pt solid var(--accent-color);
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: var(--main-text-color);
+}
+
+/* Layout Design */
+@media (min-width: 768px) {
+    :root {
+        --font-size-base: 1em; /* 16px */
+    }
+
+    .container{
+        width: 100%;
+        padding: var(--spacing-unit);
+    }
+}
