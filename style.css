@@ -1,9 +1,14 @@
-/* Basic CSS Elements (font color for now) */
+/* CSS Elements */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 /* Global variables for Colors/Units */
 :root {
     --main-text-color: #ffffff;
-    --secondary-text-color: #666;
+    --secondary-text-color: #cccccc;
     --background-color: #000000;
     --accent-color: #007BFF;
     --main-font-family: 'Arial', sans-serif;
@@ -19,9 +24,6 @@ body {
     font-family: var(--main-font-family);
     font-size: var(--main-font-size);
     line-height: 1.5;
-    margin: 0;
-    padding: 0;
-}
 /*Headings*/
 
 h1, h2, h3, h4, h5{
@@ -35,23 +37,48 @@ h1, h2, h3, h4, h5{
 }
 
 /*Paragraphs*/
-p{color:purple;}
+p{
+    color:var(--secondary-text-color);
+    margin-bottom: var(--spacing-unit);
+    padding: 0 0.5em;
+}
 
 /*Links*/
-a{color:darkcyan;}
-a:hover{color:red;}
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: var(--accent-color);
+}
 
 ol > li {
     background-color: black;
+    padding: 0.5 em;
+    margin-bottom: 0.5 em;
+    border-radius: 3px;
 }
 /*Table Headers*/
-th{color:darkblue;}
+th {
+    color: var(--accent-color);
+    padding: 0.5em;
+    border-bottom: 2px solid var(--accent-color);
+}
 
 /*Table Data*/
-td{color:darkgreen;}
+td {
+    color: var(--secondary-text-color);
+    padding: 0.5em;
+    border-bottom: 1px solid var(--secondary-text-color);
+}
 
 /*Forms*/
-label{color:royalblue;}
+label {
+    color: var(--accent-color);
+    margin-bottom: 0.25em;
+    display: block;
+}
 
 /*Buttons*/
 .button{
@@ -60,10 +87,12 @@ label{color:royalblue;}
     padding: var(--spacing-unit);
     border: 1pt solid var(--accent-color);
     cursor: pointer;
+    border-radius: 3px;
 }
 
 .button:hover{
     background-color: var(--main-text-color);
+    color: var(--accent-color);
 }
 
 /* Layout Design */
@@ -74,6 +103,6 @@ label{color:royalblue;}
 
     .container{
         width: 100%;
-        padding: var(--spacing-unit);
+        padding: calc(var(--spacing-unit) * 2);
     }
 }
