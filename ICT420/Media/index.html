@@ -3,7 +3,7 @@
     <head>
         <title>Anson Hill - My Journey!</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
     </head>
     <body class="home-page">
@@ -16,6 +16,7 @@
                     <li><a href="IWTG.html">Where I Want to Go</a></li>
                 </ul>
             </nav>
+
             <!--Top line for separation-->
             <hr>
 
@@ -26,80 +27,83 @@
             </header>
 
             <!--About Me Section-->    
+            <section class="about-me">
                 <h2> About Me </h2>
                 <p>
                     I am from a small town in northeast Ohio called Upper Sandusky.
-                    I lived there for about eighteen years until I moved to Lexington
+                    I lived there for about eighteen years until I moved to Lexington.
                     I have two bulldogs back home named Diesel and Tank.
-                    I currently travel the country doing low voltage contruction work, all
+                    I currently travel the country doing low voltage construction work, all
                     while being a student at UK and a member of the Kentucky National Guard.
                 </p>
 
-            <!-- Pictures of Me, Hannah and the Dogs-->
-                <img src="HannahAndDogs.jpeg" alt="Hannah And the Boys" style="height: 400px; width: auto; object-fit: cover;">
-                <img src="MeAndDiesel.jpeg" alt="Diesel" style="height: 400px; width: auto; object-fit: cover;">
-                <img src="Tank.jpeg" alt="Tank" style="height: 400px; width: auto; object-fit: cover;">                
+                <!-- Pictures of Me, Hannah, and the Dogs-->
+                <div class="image-gallery">
+                    <img src="HannahAndDogs.jpeg" alt="Hannah And the Boys" class="responsive-image">
+                    <img src="MeAndDiesel.jpeg" alt="Diesel" class="responsive-image">
+                    <img src="Tank.jpeg" alt="Tank" class="responsive-image">
+                </div>
+            </section>
             
             <!--Dogs Section-->
-            <h3> The Dogs!</h3>
-            <p>
-                From left to right, the first picture is of both dogs with Hannah when she first came to visit Upper Sandusky. As you can see, they took a great liking to her, but were not very fond of each other in the photo.
-            </p>
-            <p>
-                In the second picture is me and my boy Diesel. He is a big lovebug but definetly has a mind of his own. He is a bulldog mix and is about 4 years old. He loves to play and is very energetic, but picks and chooses who he plays with and attacks! Just kidding! He is a big softy and loves to cuddle.
-            </p>
-            <p>
-                The last picture was taken from my younger brother's phone. It is of my other dog, Tank. He is a purebred bulldog and is about 2 years old. He is a big baby and loves to cuddle, but he also has a mind of his own. He is very stubborn and will not listen to anyone but me. He loves to play and is very energetic, but he also loves to sleep and cuddle.
-            </p>
-                <!--Separation from About Me to Table-->
-                <hr>
+            <section class="dogs">
+                <h3> The Dogs!</h3>
+                <p>From left to right, the first picture is of both dogs with my girlfriend Hannah when she first came to visit Upper Sandusky. Needless to say she was excited for a picture, but both of them were not...</p>
+                <p>In the second picture is me and my boy Diesel. He is a big lovebug but definetly has a mind of his own. He is a bulldog mix and is about 4 years old. He loves to play and is very energetic, but picks and chooses who he plays with and attacks! Just kidding! He is a big softy and loves to cuddle.</p>
+                <p>The last picture was taken from my younger brother's phone. It is of my other dog, Tank. He is a purebred bulldog and is about 2 years old. He is a big baby and loves to cuddle, but he also has a mind of his own. He is very stubborn and will not listen to anyone but me. He loves to play and is very energetic, but he also loves to sleep and cuddle.</p>
+            </section>
 
-                <!--Table beginning-->
+            <!--Separation from About Me to Table-->
+            <hr>
+
+            <!--Table-->
+            <section class="table-section">
+                <h4>Ranking Random Activities</h4>
                 <table>
-                    <h4>Ranking Random Activites</h4>
                     <thead>
                         <tr>
-                            <th scope="colgroup" colspan="2"> What could it be!?</th>
+                            <th scope="col" colspan="2"> What could it be!? </th>
                         </tr>
                         <tr>
                             <th scope="col">Activities</th>
                             <th scope="col">Rating</th>
                         </tr>
                     </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Video Games</th>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Stubbing Your Toe</th>
-                        <td>-3</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Being Late to Class</th>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Forgetting Homework</th>
-                        <td>-1000</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Ice Water at 3 AM</th>
-                        <td>10000</td>
-                    </tr>
-                </tbody>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Video Games</th>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Stubbing Your Toe</th>
+                            <td>-3</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Being Late to Class</th>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Forgetting Homework</th>
+                            <td>-1000</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ice Water at 3 AM</th>
+                            <td>10000</td>
+                        </tr>
+                    </tbody>
                 </table>
+            </section>
 
-                <!--Separation from Table to Form-->
-                <hr>
-                <h5> Find these relatable? :</h5>
-
+            <!--Separation from Table to Form-->
+            <hr>
+            <section class="form-section">
+                <h5>Find these relatable?</h5>
                 <form action="#" method="get">
                     <label for="response">Tell me what you think!</label>
                     <input type="text" name="response" id="response" required>
                     <input type="submit" value="Submit">
                 </form>
-                
+
                 <form action="#" method="get">
                     <button type="submit" name="useless button"> Useless Button </button>
                 </form>

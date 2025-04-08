@@ -1,11 +1,10 @@
-/* CSS Elements */
-
+/* Global Styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-/* Global variables for Colors/Units */
+
 :root {
     --main-text-color: #000000;
     --secondary-text-color: #747474;
@@ -13,12 +12,11 @@
     --accent-color: #747474;
     --main-font-family: 'Arial', sans-serif;
     --heading-font-family: 'Georgia', serif;
-    --main-font-size: 1em; /* 16px */
-    --spacing-unit: 1em; /* 16px */
     --main-font-size: 16px;
+    --spacing-unit: 16px;
 }
 
-/* Style */
+/* Body */
 body {
     color: var(--main-text-color);
     background-color: var(--background-color);
@@ -29,119 +27,143 @@ body {
     padding: var(--spacing-unit);
 }
 
-/*Headings*/
-
-h1, h2, h3, h4, h5{
+/* Headings */
+h1, h2, h3, h4, h5 {
     color: var(--main-text-color);
-    font-family: var(--main-font-family);
-    font-size: var(--main-font-size);
+    font-family: var(--heading-font-family);
+    font-size: 1.5em;
     margin: var(--spacing-unit) 0;
     padding: var(--spacing-unit) 0;
     font-weight: bold;
-    text-align: center;
 }
 
-/*Paragraphs*/
-p{
-    color:var(--secondary-text-color);
+/* Paragraphs */
+p {
+    color: var(--secondary-text-color);
     margin-bottom: var(--spacing-unit);
     padding: 0 0.5em;
-    text-align: center;
 }
 
-/*Links*/
+/* Links */
 a {
     color: var(--accent-color);
     text-decoration: underline;
-    transition: color 0.3s ease;
 }
 
 a:hover {
     color: var(--accent-color);
 }
 
-/*Ordered Lists*/
-
-ol > li {
-    list-style-position: inside;
-    background-color: white;
-    padding-left: 0px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-
+/* Tables */
+table {
+    width: 100%;
+    margin: var(--spacing-unit) 0;
 }
 
-ol li {
-    padding-left: 20px;
+th, td {
+    padding: 1em;
     text-align: center;
-    margin-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
 }
 
-/*Table Headers*/
 th {
     color: var(--accent-color);
-    padding: 0.5em;
-    border-bottom: 2px solid var(--accent-color);
     text-transform: uppercase;
-    text-align: center;
 }
 
-/*Table Data*/
-td {
-    color: var(--accent-color);
-    padding: 0.5em;
-    border-bottom: 2px solid var(--accent-color);
-    text-align: center;
+ol {
+    list-style-position: inside;
 }
 
-/*Forms*/
+/* Forms */
 label {
     color: var(--accent-color);
     margin-bottom: 0.25em;
     display: block;
-    font-weight:bold;
+    font-weight: bold;
 }
 
-/*Buttons*/
-.button{
+/* Buttons */
+.button {
     background-color: var(--accent-color);
     color: var(--main-text-color);
     padding: var(--spacing-unit);
     border: 1pt solid var(--accent-color);
     cursor: pointer;
     border-radius: 3px;
-    font-weight:bold;
-    text-align: center;
-}
-
-.button:hover{
-    background-color: var(--main-text-color);
-    color: var(--accent-color);
+    font-weight: bold;
 }
 
 /* Layout Design */
-@media (min-width: 768px) {
-    :root {
-        --font-size-base: 1.2em; /* 20px */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 2);
+}
+
+/* Flexbox for Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 10px;
+    list-style: none;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.responsive-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
     }
 
-    .container{
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: calc(var(--spacing-unit) * 2);
+    /* Stack images on mobile */
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    table {
+        width: 100%;
     }
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    flex-direction: row; /* ensures horizontal layout */
-    justify-content: center;
-    gap: 40px;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
+@media (min-width: 768px) {
+    .container {
+        padding: 2em;
+    }
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .image-gallery {
+        flex-direction: row;
+    }
+}
 
