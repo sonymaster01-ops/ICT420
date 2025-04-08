@@ -24,7 +24,7 @@ body {
     background-color: var(--background-color);
     font-family: var(--main-font-family);
     font-size: var(--main-font-size);
-    text-align: justify;
+    text-align: center;
     line-height: 1.5;
     padding: var(--spacing-unit);
 }
@@ -46,7 +46,7 @@ p{
     color:var(--secondary-text-color);
     margin-bottom: var(--spacing-unit);
     padding: 0 0.5em;
-    text-align: justify;
+    text-align: center;
 }
 
 /*Links*/
@@ -63,24 +63,35 @@ a:hover {
 /*Ordered Lists*/
 
 ol > li {
+    list-style-position: inside;
     background-color: white;
-    padding: 0.5 em;
-    margin-bottom: 0.5 em;
+    padding-left: 0px;
+    margin-bottom: 10px;
     border-radius: 3px;
+
 }
+
+ol li {
+    padding-left: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 /*Table Headers*/
 th {
     color: var(--accent-color);
     padding: 0.5em;
     border-bottom: 2px solid var(--accent-color);
     text-transform: uppercase;
+    text-align: center;
 }
 
 /*Table Data*/
 td {
-    color: var(--secondary-text-color);
+    color: var(--accent-color);
     padding: 0.5em;
-    border-bottom: 1px solid var(--secondary-text-color);
+    border-bottom: 2px solid var(--accent-color);
+    text-align: center;
 }
 
 /*Forms*/
@@ -100,6 +111,7 @@ label {
     cursor: pointer;
     border-radius: 3px;
     font-weight:bold;
+    text-align: center;
 }
 
 .button:hover{
@@ -130,13 +142,6 @@ label {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    text-align: center;
   }
-  /* Hide all images by default */
-img {
-    display: none;
-}
 
-/* Show images only on the index page */
-.home-page img {
-    display: block;
-}
