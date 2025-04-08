@@ -1,26 +1,142 @@
-/* Basic CSS Elements (font color for now) */
+/* CSS Elements */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Global variables for Colors/Units */
+:root {
+    --main-text-color: #000000;
+    --secondary-text-color: #747474;
+    --background-color: #ffffff;
+    --accent-color: #747474;
+    --main-font-family: 'Arial', sans-serif;
+    --heading-font-family: 'Georgia', serif;
+    --main-font-size: 1em; /* 16px */
+    --spacing-unit: 1em; /* 16px */
+    --main-font-size: 16px;
+}
+
+/* Style */
+body {
+    color: var(--main-text-color);
+    background-color: var(--background-color);
+    font-family: var(--main-font-family);
+    font-size: var(--main-font-size);
+    text-align: justify;
+    line-height: 1.5;
+    padding: var(--spacing-unit);
+}
 
 /*Headings*/
-h1{color:blue;}
-h2{color:green;}
-h3{color:orange;}
-h4{color:teal;}
+
+h1, h2, h3, h4, h5{
+    color: var(--main-text-color);
+    font-family: var(--main-font-family);
+    font-size: var(--main-font-size);
+    margin: var(--spacing-unit) 0;
+    padding: var(--spacing-unit) 0;
+    font-weight: bold;
+    text-align: center;
+}
 
 /*Paragraphs*/
-p{color:purple;}
+p{
+    color:var(--secondary-text-color);
+    margin-bottom: var(--spacing-unit);
+    padding: 0 0.5em;
+    text-align: justify;
+}
 
 /*Links*/
-a{color:darkcyan;}
-a:hover{color:red;}
+a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
 
+a:hover {
+    color: var(--accent-color);
+}
+
+/*Ordered Lists*/
+
+ol > li {
+    background-color: white;
+    padding: 0.5 em;
+    margin-bottom: 0.5 em;
+    border-radius: 3px;
+}
 /*Table Headers*/
-th{color:darkblue;}
+th {
+    color: var(--accent-color);
+    padding: 0.5em;
+    border-bottom: 2px solid var(--accent-color);
+    text-transform: uppercase;
+}
 
 /*Table Data*/
-td{color:darkgreen;}
+td {
+    color: var(--secondary-text-color);
+    padding: 0.5em;
+    border-bottom: 1px solid var(--secondary-text-color);
+}
 
 /*Forms*/
-label{color:royalblue;}
+label {
+    color: var(--accent-color);
+    margin-bottom: 0.25em;
+    display: block;
+    font-weight:bold;
+}
 
 /*Buttons*/
-button, input[type="submit"]{color:darkred;}
+.button{
+    background-color: var(--accent-color);
+    color: var(--main-text-color);
+    padding: var(--spacing-unit);
+    border: 1pt solid var(--accent-color);
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight:bold;
+}
+
+.button:hover{
+    background-color: var(--main-text-color);
+    color: var(--accent-color);
+}
+
+/* Layout Design */
+@media (min-width: 768px) {
+    :root {
+        --font-size-base: 1.2em; /* 20px */
+    }
+
+    .container{
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: calc(var(--spacing-unit) * 2);
+    }
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    flex-direction: row; /* ensures horizontal layout */
+    justify-content: center;
+    gap: 40px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  /* Hide all images by default */
+img {
+    display: none;
+}
+
+/* Show images only on the index page */
+.home-page img {
+    display: block;
+}

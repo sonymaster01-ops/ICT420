@@ -10,7 +10,7 @@
     --main-text-color: #000000;
     --secondary-text-color: #747474;
     --background-color: #ffffff;
-    --accent-color: #007BFF;
+    --accent-color: #747474;
     --main-font-family: 'Arial', sans-serif;
     --heading-font-family: 'Georgia', serif;
     --main-font-size: 1em; /* 16px */
@@ -119,4 +119,24 @@ label {
         margin: 0 auto;
         padding: calc(var(--spacing-unit) * 2);
     }
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    flex-direction: row; /* ensures horizontal layout */
+    justify-content: center;
+    gap: 40px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  /* Hide all images by default */
+img {
+    display: none;
+}
+
+/* Show images only on the index page */
+.home-page img {
+    display: block;
 }
